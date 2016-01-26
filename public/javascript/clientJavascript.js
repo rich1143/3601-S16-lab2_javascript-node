@@ -29,3 +29,6 @@ var returnKittens = function(){
     return "kittens";
 };
 
+var dontReturnKittens = function(){
+    return "Not Kittens!";
+};

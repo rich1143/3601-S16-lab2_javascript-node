@@ -52,11 +52,19 @@ for finding string length is called on the name of the pet. When accesign the pa
 
 #####Find the testing file, describe where it is located and what it is testing. Run karma (the testing engine) as specified in the Readme and describe results. Do not edit any files at this time.
 
+> The tests are located in clientJavascript.spec.js. It is testing the string length function as well as the returnKittens function.
+
 #####After having set up Travis CI with your forked project, play around the page for your project (build history, settings, branches, etc) and describe at least 3 features you think would be useful when troubleshooting a broken project.
+
+>  Having the feature that it shows when your code is broken versus not broken in the separate builds is very helpful. Keeping a build history helps see pushes in a nicer format. The testing format for pass and fail is much neater and would be easier to troubleshoot.
 
 #####What was the build status of your project right after you got everything set up? Use Travis to find any problems, and describe what failed, if anything. (Which files, what lines, why did failure occur, etc.)
 
+> The build status was a failure. This is due to a test failing  in the clientJavascript.spec.js. file at line 14. Expected "kittens" but got "Not Kittens!"
+
 #####Fix any problems described in the previous question. Describe how you fixed them. Push your fix to GitHub and post a link to the passing build (from build history) here.
+
+>
 
 - Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
 
