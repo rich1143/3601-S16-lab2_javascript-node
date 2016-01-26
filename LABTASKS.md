@@ -33,13 +33,20 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 for finding string length is called on the name of the pet. When accesign the page, app.js responds by sending the browser to petForm.html. However, when a form is submitted, it responds by showing the submitted name with details on the string length.
 
 #####Where is client-side Javascript defined? Name file(s) in which it is used.
+
 >It is defined in clientjavascript.js
 
 #####Where is server-side Javascript helper file defined? Where can it be used? Add a function to it and experiment with where you can call this function.
 
+>It is defined in serverjavascript.js, it can be used in app.js file
+
 #####What is the purpose of package.json file? What's in it, and what does it mean?
 
+>The purpose is to give descriptive information, includes authors, names version, tests.
+
 #####What's in .gitgnore file? What's the purpose of it?
+
+>It has files that should be ignored when pushing and pulling github files.
 
 ## Part #2: exploring testing
 
