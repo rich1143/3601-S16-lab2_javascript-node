@@ -64,7 +64,8 @@ for finding string length is called on the name of the pet. When accesign the pa
 
 #####Fix any problems described in the previous question. Describe how you fixed them. Push your fix to GitHub and post a link to the passing build (from build history) here.
 
->
+> We added a fucntion dontReturnKittens which returns "Not Kittens!", this then makes the third test pass.
+https://travis-ci.org/rich1143/3601-S16-lab2_javascript-node/builds/104977807
 
 - Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
 

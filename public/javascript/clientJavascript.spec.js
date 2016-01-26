@@ -9,9 +9,18 @@ describe('testing basic functions', function(){
         expect(returnKittens()).toBe("kittens");
     });
 
-    ////this test should fail.
-    it('this test should fail!', function(){
+    it('this test should not fail!', function(){
         expect(dontReturnKittens()).toBe("Not Kittens!");
     });
+
+    it('this should test letter to numbers', function()
+        expect(lettersToNumbers('A')).toEqual(4);
+        expect(lettersToNumbers('B')).toEqual(3);
+        expect(lettersToNumbers('C')).toEqual(2);
+        expect(lettersToNumbers('D')).toEqual(1);
+        expect(lettersToNumbers('F')).toEqual(0);
+        expect(lettersToNumbers('A-')).toEqual(3.666);
+        expect(lettersToNumbers('C+')).toEqual(2.333);
+    )
 });
 
