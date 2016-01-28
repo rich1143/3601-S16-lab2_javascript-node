@@ -28,6 +28,8 @@ describe('testing basic functions', function() {
         expect(lettersToNumbers('F')).toEqual(0);
     });
 
+
+
     it('tests an averaging function', function () {
         expect(average(4, 4, 4)).toEqual(4);
         expect(average(1, 1, 0)).toEqual(.666);
