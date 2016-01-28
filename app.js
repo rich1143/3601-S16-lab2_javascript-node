@@ -47,7 +47,7 @@ app.get('/petForm', function(req, res){
 });
 
 app.post('/petForm', function(req, res){
-    res.send(req.body.newPet + " String Length: " + tools.stringlength(req.body.newPet));
+    res.send(req.body.newPet + " String Length: " + tools.stringLength(req.body.newPet));
     console.log(req.body.newPet);
 });
 
@@ -57,12 +57,11 @@ app.get('/', function(req, res){
 
 app.get('/GPACalculator', function(req, res){
     res.sendFile('GPACalculator.html', options);
-    //console.log(req.query["newPet"]);
 });
 
 app.post('/GPACalculator', function(reg,res){
-    res.send(GPACalc(reg.body.letterGrades1, reg.body.letterGrades2, reg.body.letterGrades3, reg.body.credits1,reg.body.credits2,reg.body.credits3));
-})
+    res.send(tools.GPACalc(reg.body.letterGrades1, reg.body.letterGrades2, reg.body.letterGrades3, reg.body.credits1,reg.body.credits2,reg.body.credits3));
+});
 
 // Wildcard catches requests for non-existent routes or files and responds with a 404 message (or an html page if you want to make a custom one!)
 app.get('*', function(req, res){
