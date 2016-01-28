@@ -61,7 +61,7 @@ app.get('/GPACalculator', function(req, res){
 });
 
 app.post('/GPACalculator', function(reg,res){
-    res.send(GPAreg.body.)
+    res.send(GPACalc(reg.body.letterGrades1, reg.body.letterGrades2, reg.body.letterGrades3, reg.body.credits1,reg.body.credits2,reg.body.credits3));
 })
 
 // Wildcard catches requests for non-existent routes or files and responds with a 404 message (or an html page if you want to make a custom one!)

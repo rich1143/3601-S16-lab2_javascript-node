@@ -30,10 +30,18 @@ describe('testing basic functions', function() {
 
 
 
-    it('tests an averaging function', function () {
-        expect(average(4, 4, 4)).toEqual(4);
-        expect(average(1, 1, 0)).toEqual(.666);
-        expect(average(1.333, 3.333, 0.666)).toEqual(1.777);
-        expect(average(0, 0, 0)).toEqual(0);
+    it('tests studentPoints function', function () {
+        expect(studentPoints("A", "A", "A",4.0,3.0,2.0)).toEqual(36.0);
+        expect(studentPoints("D","D", "F",3,4,5)).toEqual(7.0);
+        expect(studentPoints("D+", "C+", "D-",2,4,4)).toEqual(14.662);
+        expect(studentPoints("F", "F", "F",.5,5,2)).toEqual(0.0);
     });
+
+    it('tests GPACalc function', function () {
+        expect(GPACalc("A", "A", "A",4.0,3.0,2.0)).toEqual(4.0);
+        expect(GPACalc("D","D", "F",3,4,5)).toEqual(0.5833);
+        expect(GPACalc("D+", "C+", "D-",2,4,4)).toEqual(1.4662);
+        expect(GPACalc("F", "F", "F",.5,5,2)).toEqual(0.0);
+    });
+
 });

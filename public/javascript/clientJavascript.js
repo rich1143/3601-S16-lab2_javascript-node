@@ -79,5 +79,5 @@ var studentPoints = function(grade1,grade2,grade3, cred1, cred2, cred3){
 var GPACalc = function(grade1, grade2, grade3, cred1, cred2, cred3){
     pointsEarned = studentPoints(grade1, grade2, grade3 , cred1, cred2, cred3);
     totalPoints = 4.0*(cred1 + cred2 + cred3);
-    return (pointsEarned/totalPoints);
+    return Math.round(4.0*(pointsEarned/totalPoints)*10000)/10000;
 };
