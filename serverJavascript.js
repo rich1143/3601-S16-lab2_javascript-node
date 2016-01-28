@@ -55,6 +55,9 @@ var studentPoints = function(grade1,grade2,grade3, cred1, cred2, cred3){
     return sum;
 };
 
+//GPACalc uses nested if statements to check to see if the user does not input the credit numbers
+
+
 exports.GPACalc = function(grade1, grade2, grade3, cred1, cred2, cred3){
     pointsEarned = Math.round(studentPoints(grade1, grade2, grade3 , cred1, cred2, cred3)*10000)/10000;
     totalPoints = Math.round((parseInt(cred1) + parseInt(cred2) + parseInt(cred3))*40000)/10000;
