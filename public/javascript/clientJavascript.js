@@ -32,3 +32,15 @@ var returnKittens = function(){
 var dontReturnKittens = function(){
     return "Not Kittens!";
 };
+
+var lettersToNumbers = function(letterGrade){
+    return 0;
+};
+
+var average = function(grade1,grade2,grade3){
+    G1 = lettersToNumbers(grade1);
+    G2 = lettersToNumbers(grade2);
+    G3 = lettersToNumbers(grade3);
+    sum = G1 + G2 + G3;
+    return sum/3.0;
+};
