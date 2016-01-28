@@ -8,6 +8,10 @@ exports.stringDouble = function(str){
    return str + str;
 };
 
+exports.isNaN = function(int){
+    return isNaN(int);
+};
+
 var lettersToNumbers = function(letterGrade){
     if(letterGrade=="A"){
         return 4.0;
@@ -52,8 +56,21 @@ var studentPoints = function(grade1,grade2,grade3, cred1, cred2, cred3){
 };
 
 exports.GPACalc = function(grade1, grade2, grade3, cred1, cred2, cred3){
-    pointsEarned = Math.round(studentPoints(grade1, grade2, grade3 , parseInt(cred1), parseInt(cred2), parseInt(cred3))*10000)/10000;
+    pointsEarned = Math.round(studentPoints(grade1, grade2, grade3 , cred1, cred2, cred3)*10000)/10000;
     totalPoints = Math.round((parseInt(cred1) + parseInt(cred2) + parseInt(cred3))*40000)/10000;
     GPA =  Math.round(4.0*(pointsEarned/totalPoints)*10000)/10000;
+    if(isNaN(GPA)==true){
+        pointsEarned = Math.round(studentPoints(grade1, grade2, grade3 , cred1, cred2,0)*10000)/10000;
+        totalPoints = Math.round((parseInt(cred1) + parseInt(cred2))*40000)/10000;
+        GPA =  Math.round(4.0*(pointsEarned/totalPoints)*10000)/10000;
+        if(isNaN(GPA) == true){
+            pointsEarned = Math.round(studentPoints(grade1, grade2, grade3 , cred1,0,0)*10000)/10000;
+            totalPoints = Math.round((parseInt(cred1))*40000)/10000;
+            GPA =  Math.round(4.0*(pointsEarned/totalPoints)*10000)/10000;
+            if(isNaN(GPA) == true){
+                return "Please enter a credit number and the grade associated with it."
+            }
+        }
+    }
     return GPA.toString();
 };
